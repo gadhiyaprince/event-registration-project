@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Registration Form</title>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+
+            /* Your Background Image */
+            background-image: 
+            linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+            url("https://d13loartjoc1yn.cloudfront.net/upload/library/1751509524parul-university-previous-year-question-papers.webp");
+
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        h1 {
+            text-align: center;
+            background-color: rgba(221, 36, 118, 0.9);
+            color: white;
+            padding: 15px;
+            margin: 0;
+        }
+
+        .form-box {
+            width: 320px;
+            margin: 60px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0 12px 0;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #dd2476;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #c61f66;
+        }
+    </style>
+
+    <script>
+        function submitForm(event) {
+            event.preventDefault();
+            alert("Registration Successful!");
+            document.getElementById("regForm").reset();
+        }
+    </script>
+</head>
+
+<body>
+
+<h1>Parul University Event Registration</h1>
+
+<div class="form-box">
+    <form id="regForm" onsubmit="submitForm(event)">
+        <label>Full Name:</label>
+        <input type="text" required>
+
+        <label>Email:</label>
+        <input type="email" required>
+
+        <label>Phone Number:</label>
+        <input type="tel" required>
+
+        <label>Select Event:</label>
+        <select required>
+            <option value="">-- Select Event --</option>
+            <option>Tech Fest</option>
+            <option>Coding Competition</option>
+            <option>Cultural Fest</option>
+        </select>
+
+        <button type="submit">Register</button>
+    </form>
+</div>
+
+</body>
+</html>
